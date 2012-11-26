@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Guess Game !!</title>
+	<script src="/stylesheets/gen_validatorv4.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="colorbar">  </div>
+	<div id="heading">
+	<h3><a href="/">Guess Game</a></h3>
+
+	<div id="scorecard">
+<a href="/score" class="button green">Score Card</a>
+</div>
+	</div>
+	<div id="content">
+		<form action="/start" method="post" accept-charset="utf-8" id="myform">
+			<input class="inbox" id="name" type="text" name="name" value="" placeholder="Enter Your Name .. ">	
+			<br /><br /><br />
+			<input class="super button pink" type="submit" name="" value="Start the Game!!">
+		</form>
+	</div>
+
+	<div id="foot">
+		Credits : Siddhartha , Get me at facebook : <a target="_blank" href ="http://facebook.com/siddharthagudipati"> Ping me </a>
+	</div>
+
+	<script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator  = new Validator("myform");
+ frmvalidator.EnableMsgsTogether();
+ frmvalidator.addValidation("name","req","Enter your Name.. dude!! :P ");
+ 
+//]]></script>
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Guess Game !!</title>
+	<script src="/stylesheets/gen_validatorv4.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="colorbar">  </div>
+	<div id="heading">
+	<h3><a href="/">Guess Game</a></h3>
+
+		<div id="scorecard">
+<a href="/score" class="button green">Score Card</a>
+</div>
+	</div>
+	<div id="content">
+	<form action="/play" method="post" accept-charset="utf-8" id="myform">
+		<h2>Enter a Number :</h2>
+<input type="text" class="inbox1" id="input" name="value" value="" placeholder="Enter your guess" onkeypress='return validate(event)'> <br /> <br />
+      <input type="hidden" name="start_time" value="{{ start_time }}" placeholder="">
+      <input type="hidden" name="name" value="{{ name }}" placeholder="">
+      <input type="hidden" name="key" value="{{ key }}" placeholder="">
+      <input class="super button green" type="submit" name="" value="Guess">
+    </form>
+	</div>
+
+	<div id="foot">
+		Credits : Siddhartha, Get me at facebook : <a target="_blank" href ="http://facebook.com/siddharthagudipati"> Ping me </a>
+	</div>
+
+	<script type="text/javascript">
+	function validate(evt) {
+	 var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+	}
+
+	</script>
+
+		<script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator  = new Validator("myform");
+ frmvalidator.EnableMsgsTogether();
+ frmvalidator.addValidation("input","req","Enter a number dude :P :P");
+ 
+//]]></script>
+</body>
+</html>
